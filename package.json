@@ -6,7 +6,13 @@
   "scripts": {
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunojus/nodeapi-typescript.git"
   },
   "keywords": [
     "nodejs",
@@ -14,10 +20,17 @@
     "api"
   ],
   "author": "Bruno Praciano",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunojus/nodeapi-typescript/issues"
+  },
+  "homepage": "https://github.com/brunojus/nodeapi-typescript#readme",
   "devDependencies": {
     "@types/module-alias": "^2.0.1",
     "@types/node": "^17.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
     "typescript": "^4.5.4"
   },
   "dependencies": {
